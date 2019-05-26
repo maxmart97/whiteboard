@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Google Median Problem</title>
+    <script src="../js/median.js"></script>
+    <script>
+        document.write("<h1>Google's median problem from the AITP meeting</h1>");
+        document.write("<h2>Uses Insertion-Sort algorithm to sort the array.</h2>");
+        document.write("<hr><br>")
+
+        var theArray = [9, 30, 50, 2, 1, 60, 25, 33, 77, 94, 201, 403, 65, 32, 73, 58, 90, 12, 3, 23];
+        document.write("The base array is: [" + theArray.join() + "]<br><br>");
+
+        theArray = insertIntoArray(theArray, 15);
+
+        document.write("The array after inserting a value is: [" + theArray.join() + "]<br><br>");
+
+        var median = getMedian(theArray);
+        
+        document.write("The sorted array in ascending order is: [" + theArray.join() +"]<br><br>");
+
+        document.write("The sorted array in descending order is: [" + insertionSortDesc(theArray).join() +"]<br>");
+
+        document.write("The median is: " + median + "<br><br>");
+
+    </script>
+</head>
+<body>
+    <p>According to the developer at Google, the best way to solve this problem is with heaps.</p>
+</body>
+</html>
